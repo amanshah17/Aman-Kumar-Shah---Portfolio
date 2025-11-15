@@ -1,0 +1,127 @@
+/* =========================================
+   Prism.js – Dark Theme (Optimized)
+   ========================================= */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #ccc;
+  background: transparent;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+
+  /* Tab size */
+  tab-size: 4;
+
+  /* Disable hyphens */
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+/* Code block container */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.75em 0;
+  overflow: auto;
+  background: #091121;
+  border-radius: 0.5em;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  background: #091121;
+  padding: 0.25em 0.4em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+/* -------- Syntax Colors -------- */
+
+/* Comments / invisible syntax */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+/* Punctuation */
+.token.punctuation {
+  color: #ccc;
+}
+
+/* Tags / deleted code */
+.token.tag,
+.token.namespace,
+.token.deleted,
+.token.attr-name {
+  color: #e2777a;
+}
+
+/* Functions */
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.function,
+.token.boolean,
+.token.number {
+  color: #f08d49;
+}
+
+/* Classes, constants, symbols */
+.token.class-name,
+.token.constant,
+.token.property,
+.token.symbol {
+  color: #f8c555;
+}
+
+/* Keywords, selectors, important rules */
+.token.keyword,
+.token.builtin,
+.token.important,
+.token.atrule,
+.token.selector {
+  color: #cc99cd;
+}
+
+/* Strings, variables, regex */
+.token.string,
+.token.char,
+.token.variable,
+.token.attr-value,
+.token.regex {
+  color: #7ec699;
+}
+
+/* Operators & URLs */
+.token.operator,
+.token.entity,
+.token.url {
+  color: #67cdcc;
+}
+
+/* Bold / italic text */
+.token.bold,
+.token.important {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+/* Entity tooltip */
+.token.entity {
+  cursor: help;
+}
+
+/* Inserted code */
+.token.inserted {
+  color: limegreen;
+}
