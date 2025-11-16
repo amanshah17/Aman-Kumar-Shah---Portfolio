@@ -64,7 +64,7 @@ export default function AmanPortfolioCard() {
 
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] p-4 md:p-8 flex items-center justify-center overflow-hidden relative"
+      className="min-h-screen bg-linear-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] p-4 md:p-8 flex items-center justify-center overflow-hidden relative"
       animate={controls}
     >
       <Particles />
@@ -78,7 +78,7 @@ export default function AmanPortfolioCard() {
         {/* Profile Section */}
         <Card className="p-8 flex flex-col items-center text-center shadow-xl rounded-2xl backdrop-blur-lg bg-[#1E293B]/50 border border-[#2DD4BF]/20 overflow-hidden relative">
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-[#2DD4BF]/30 to-[#38BDF8]/30"
+            className="absolute inset-0 bg-linear-to-r from-[#2DD4BF]/30 to-[#38BDF8]/30"
             animate={{ scale: isHovered ? 1.1 : 1, rotate: isHovered ? 5 : 0 }}
             transition={{ duration: 0.3 }}
           />
@@ -91,13 +91,13 @@ export default function AmanPortfolioCard() {
             onHoverEnd={() => setIsHovered(false)}
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8] rounded-full shadow-xl"
+              className="absolute inset-0 bg-linear-to-r from-[#2DD4BF] to-[#38BDF8] rounded-full shadow-xl"
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             />
 
             <img
-              src="/aman-profile.jpeg" // set correct path
+              src="../../assets/images/hero.jpg" 
               alt="Aman Kumar Shah"
               className="rounded-full relative z-10 w-full h-full object-cover border-4 border-gray-700 group-hover:border-purple-500 transition-colors duration-300"
             />
@@ -105,7 +105,7 @@ export default function AmanPortfolioCard() {
 
           {/* Name */}
           <motion.h1
-            className="text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8]"
+            className="text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-linear-to-r from-[#2DD4BF] to-[#38BDF8]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -114,15 +114,16 @@ export default function AmanPortfolioCard() {
 
           {/* Email */}
           <motion.a
-            href="mailto:amanshahmca2023@gmail.com"
+            href="mailto:shahamankumar054@gmail.com"
             className="text-lg text-blue-400 hover:text-blue-300 transition-colors"
           >
-            amanshahmca2023@gmail.com
+            shahamankumar054@gmail.com
           </motion.a>
 
           {/* Download CV */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <Button className="mt-6 bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8] hover:opacity-90 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105">
+            <Button className="mt-6 bg-linear-to-r from-[#2DD4BF] to-[#38BDF8] hover:opacity-90 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105"
+            onClick={()=>{window.open("../../assets/images/aman_resume.pdf")}}  >
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </Button>
@@ -135,7 +136,7 @@ export default function AmanPortfolioCard() {
           <Card className="p-6 shadow-xl rounded-2xl backdrop-blur-lg bg-[#1E293B]/50 border border-[#2DD4BF]/20">
             <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8]">
+                <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#2DD4BF] to-[#38BDF8]">
                   About Me
                 </h2>
 
@@ -155,30 +156,10 @@ export default function AmanPortfolioCard() {
             </div>
           </Card>
 
-          {/* Experience */}
-          <Card className="p-6 shadow-xl rounded-2xl backdrop-blur-lg bg-[#1E293B]/50 border border-[#2DD4BF]/20">
-            <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8]">
-              Experience
-            </h2>
-
-            <div className="space-y-6">
-              <motion.div className="flex items-center gap-4" whileHover={{ x: 10 }}>
-                <div className="w-16 h-16 bg-gradient-to-br from-[#2DD4BF] to-[#38BDF8] rounded-2xl flex items-center justify-center shadow-lg">
-                  <Briefcase className="w-8 h-8 text-gray-200" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-xl text-gray-100">
-                    Quality Control Officer
-                  </h3>
-                  <p className="text-lg text-gray-400">BKT Carbon (2021–2022)</p>
-                </div>
-              </motion.div>
-            </div>
-          </Card>
-
+         
           {/* Tech Stack */}
           <Card className="p-6 shadow-xl rounded-2xl backdrop-blur-lg bg-[#1E293B]/50 border border-[#2DD4BF]/20">
-            <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8]">
+            <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-linear-to-r from-[#2DD4BF] to-[#38BDF8]">
               Tech Stack
             </h2>
 
@@ -194,7 +175,7 @@ export default function AmanPortfolioCard() {
                     <TooltipTrigger>
                       <motion.div className="text-center" whileHover={{ y: -8 }}>
                         <motion.div
-                          className="w-16 h-16 bg-gradient-to-br from-[#2DD4BF] to-[#38BDF8] rounded-2xl flex items-center justify-center mb-2 shadow-lg"
+                          className="w-16 h-16 bg-linear-to-br from-[#2DD4BF] to-[#38BDF8] rounded-2xl flex items-center justify-center mb-2 shadow-lg"
                           whileHover={{ scale: 1.1 }}
                         >
                           {skill.icon}

@@ -112,7 +112,7 @@ const profile = {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-6">
                 <a
-                  href="https://github.com/Aman-Kumar-Shah"
+                  href="https://github.com/amanshah17"
                   className="group relative inline-flex items-center justify-center gap-3 bg-linear-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl hover:scale-105"
                 >
                   <span className="block w-full px-8 py-4 rounded-[11px] bg-gray-900 group-hover:bg-linear-to-r group-hover:from-blue-500 group-hover:to-teal-400">
@@ -123,7 +123,7 @@ const profile = {
                 </a>
 
                 <a
-                  href="/resume.pdf"
+                  href="../../assets/images/aman_resume.pdf"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-linear-to-r from-gray-800 to-gray-700 hover:scale-105"
                 >
                   <span className="block w-full px-8 py-4 rounded-[11px] bg-gray-900 border border-gray-700/50">

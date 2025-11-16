@@ -5,7 +5,7 @@ const GRID_SIZE = 40;
 export default function AnimatedGrid() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] opacity-20">
+      <div className="absolute inset-0 mask-[radial-gradient(ellipse_at_center,transparent_20%,black)] opacity-20">
 
         {/* Vertical Lines */}
         <div className="absolute inset-0 grid grid-cols-[repeat(40,1fr)]">

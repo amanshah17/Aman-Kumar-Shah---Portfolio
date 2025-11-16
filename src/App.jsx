@@ -25,7 +25,7 @@ const App = () => {
         </>
       ) : (
         // Router Mode: Use routes for navigation
-        <Routes>`
+        <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/education" element={<Education />} />
