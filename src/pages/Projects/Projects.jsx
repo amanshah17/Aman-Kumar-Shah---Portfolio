@@ -11,7 +11,7 @@ const Projects = () => {
       title: "Student Management System (JSP, Servlet, JDBC)",
       description:
         "A complete student management web application built using JSP, Servlets, JDBC, and MySQL. Features include CRUD operations, login system, session handling, form validation, and record sorting using Java Collections.",
-      src: "../../assets/images/student.png",
+      src: "https://drive.google.com/file/d/1Q8yom5fVs_UJjHlY-yKb5jxem7-twxYc/view?usp=sharing",
       githubLink:
         "https://github.com/amanshah17/Student-Management-Servlet-crud-A",
     },
@@ -25,7 +25,7 @@ const Projects = () => {
       title: "Personal Portfolio Website (React + Tailwind CSS)",
       description:
         "A modern portfolio website built using React, Tailwind CSS, and Framer Motion. Includes animations, project showcases, responsive design, and a dynamic UI to highlight skills and achievements.",
-      src: "../../assets/images/portfolio.png",
+      src: "https://drive.google.com/file/d/1pcpnT0u80xNKAAzRtKrqGwFOqHL1n-p2/view?usp=sharing",
       githubLink: "https://github.com/amanshah17/Aman-Kumar-Shah---Portfolio",
       liveLink: "https://amanshah17.github.io/Aman-Kumar-Shah---Portfolio/",
     },

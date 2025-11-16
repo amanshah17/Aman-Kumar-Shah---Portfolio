@@ -84,9 +84,9 @@ const EducationSection = () => {
     <section className="min-h-screen relative overflow-hidden py-40 bg-[#04081A]">
       {/* Grid Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#04081A] via-transparent to-[#04081A]" />
-        <div className="absolute inset-0 border border-white/[0.05] grid grid-cols-2 md:grid-cols-4" />
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[50px_50px]" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#04081A] via-transparent to-[#04081A]" />
+        <div className="absolute inset-0 border border-white/5 grid grid-cols-2 md:grid-cols-4" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
@@ -96,7 +96,7 @@ const EducationSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
             Educational Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
