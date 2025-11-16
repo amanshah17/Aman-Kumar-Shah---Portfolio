@@ -52,46 +52,38 @@ export const renderCustomIcon = (icon, theme) => {
 export default function IconCloud({ iconSlugs = [], imageArray = [] }) {
   const [iconData, setIconData] = useState(null);
   const { theme = "dark" } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Fetch icons only when slugs change
+  // Only render client-side
   useEffect(() => {
-    let isMounted = true;
+    setIsMounted(true);
+  }, []);
 
+  useEffect(() => {
+    let active = true;
     if (iconSlugs.length > 0) {
       fetchSimpleIcons({ slugs: iconSlugs }).then((response) => {
-        if (isMounted) setIconData(response);
+        if (active) setIconData(response);
       });
     }
-
-    return () => {
-      isMounted = false;
-    };
+    return () => (active = false);
   }, [iconSlugs]);
 
-  // Memoized render for performance
   const renderedIcons = useMemo(() => {
     if (!iconData?.simpleIcons) return null;
-
     return Object.values(iconData.simpleIcons).map((icon) =>
       renderCustomIcon(icon, theme)
     );
   }, [iconData, theme]);
 
+  if (!isMounted) return null;
+
   return (
     <Cloud {...cloudProps}>
-      {/* Render SVG icons */}
       {renderedIcons}
-
-      {/* Render image icons if provided */}
       {imageArray.map((image, index) => (
-        <a key={index} href="#" onClick={(e) => e.preventDefault()}>
-          <img
-            src={image}
-            alt="cloud-icon"
-            width="42"
-            height="42"
-            draggable={false}
-          />
+        <a key={index} role="button" onClick={(e) => e.preventDefault()}>
+          <img src={image} alt="cloud-icon" width="42" height="42" draggable={false} />
         </a>
       ))}
     </Cloud>

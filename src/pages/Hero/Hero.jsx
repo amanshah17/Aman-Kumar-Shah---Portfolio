@@ -11,9 +11,21 @@ import { FlipWords } from "../../components/ui/flip-words";
 const GridBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
     <div className="absolute inset-0 mask-[radial-gradient(ellipse_at_center,transparent_0%,black)]">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="absolute inset-0">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        className="absolute inset-0"
+      >
         <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <rect width="40" height="40" fill="none" stroke="white" strokeWidth="0.5" className="opacity-40 animate-gridPulse" />
+          <rect
+            width="40"
+            height="40"
+            fill="none"
+            stroke="white"
+            strokeWidth="0.5"
+            className="opacity-40 animate-gridPulse"
+          />
         </pattern>
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
@@ -73,14 +85,14 @@ const profile = {
           </div>
 
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28">
-
             {/* LEFT SECTION */}
             <div className="w-full lg:w-1/2 mb-12 lg:mb-0 relative">
-
               {/* Welcome badge */}
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 border border-gray-700/50 mb-8">
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
-                <span className="text-gray-300 text-sm">Welcome to my portfolio</span>
+                <span className="text-gray-300 text-sm">
+                  Welcome to my portfolio
+                </span>
               </div>
 
               {/* Name */}
@@ -105,8 +117,8 @@ const profile = {
 
               {/* Description */}
               <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed max-w-xl mb-12">
-                Java Developer 🚀 | Spring Boot + React 💻 | Passionate about crafting clean,
-                scalable and efficient applications.
+                Java Developer 🚀 | Spring Boot + React 💻 | Passionate about
+                crafting clean, scalable and efficient applications.
               </p>
 
               {/* Buttons */}
@@ -132,6 +144,19 @@ const profile = {
                     </span>
                   </span>
                 </a>
+                <a
+                  href="https://leetcode.com/u/_king_aman1712/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-linear-to-r from-yellow-500 to-orange-400 hover:scale-105 transition-transform duration-300 shadow-lg"
+                >
+                  <span className="block w-full px-8 py-4 rounded-[11px] bg-gray-900 group-hover:bg-linear-to-r group-hover:from-yellow-500 group-hover:to-orange-400">
+                    <span className="flex items-center gap-2 text-white font-semibold text-lg">
+                      {/* Optional LeetCode icon */}
+                      <span>See LeetCode</span>
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
 
@@ -153,7 +178,6 @@ const profile = {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 
