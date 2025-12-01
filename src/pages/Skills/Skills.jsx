@@ -3,17 +3,20 @@ import { Card, CardContent } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
 import IconCloudDemo from "../../components/ui/icon-cloud";
 
+// Icons
 import { Code2, Database, Cpu, Layout, Wrench } from "lucide-react";
-import { FaJava, FaReact, FaGithub, FaGitAlt } from "react-icons/fa";
+import { FaJava, FaReact, FaGithub, FaGitAlt, FaDatabase } from "react-icons/fa";
 import {
   SiSpringboot,
   SiMysql,
   SiJavascript,
   SiJquery,
   SiTailwindcss,
+  SiPostman,
+  SiSpring,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
-import { BsFileEarmarkCode } from "react-icons/bs";
+import { BsFileEarmarkCode, BsCodeSquare } from "react-icons/bs";
 import { PiFileSql } from "react-icons/pi";
 import { DiMysql } from "react-icons/di";
 
@@ -54,26 +57,11 @@ export default function SkillsSection() {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-        {
-          name: "React.js",
-          icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
-        },
-        {
-          name: "JavaScript",
-          icon: <SiJavascript className="w-4 h-4 text-yellow-400" />,
-        },
-        {
-          name: "HTML5",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-orange-500" />,
-        },
-        {
-          name: "CSS3",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-blue-500" />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-        },
+        { name: "React.js", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+        { name: "JavaScript", icon: <SiJavascript className="w-4 h-4 text-yellow-400" /> },
+        { name: "HTML5", icon: <BsFileEarmarkCode className="w-4 h-4 text-orange-500" /> },
+        { name: "CSS3", icon: <BsFileEarmarkCode className="w-4 h-4 text-blue-500" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" /> },
       ],
     },
 
@@ -84,52 +72,25 @@ export default function SkillsSection() {
       color: "text-green-400",
       skills: [
         { name: "Java", icon: <FaJava className="w-4 h-4 text-red-500" /> },
-        {
-          name: "Spring",
-          icon: <SiSpring className="w-4 h-4 text-green-500" />,
-        },
-        {
-          name: "Spring Boot",
-          icon: <SiSpringboot className="w-4 h-4 text-green-500" />,
-        },
-        {
-          name: "Spring MVC",
-          icon: <SiSpring className="w-4 h-4 text-green-400" />,
-        },
-        {
-          name: "Hibernate / JPA",
-          icon: <PiFileSql className="w-4 h-4 text-blue-300" />,
-        },
-        {
-          name: "REST API Development",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-gray-300" />,
-        },
-        {
-          name: "MySQL",
-          icon: <FaDatabase className="w-4 h-4 text-blue-500" />,
-        },
-        {
-          name: "JDBC",
-          icon: <PiFileSql className="w-4 h-4 text-yellow-300" />,
-        },
-        {
-          name: "Servlet & JSP",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-white" />,
-        },
+        { name: "Spring", icon: <SiSpring className="w-4 h-4 text-green-500" /> },
+        { name: "Spring Boot", icon: <SiSpringboot className="w-4 h-4 text-green-500" /> },
+        { name: "Spring MVC", icon: <SiSpring className="w-4 h-4 text-green-400" /> },
+        { name: "Hibernate / JPA", icon: <PiFileSql className="w-4 h-4 text-blue-300" /> },
+        { name: "REST API Development", icon: <BsFileEarmarkCode className="w-4 h-4 text-gray-300" /> },
+        { name: "MySQL", icon: <FaDatabase className="w-4 h-4 text-blue-500" /> },
+        { name: "JDBC", icon: <PiFileSql className="w-4 h-4 text-yellow-300" /> },
+        { name: "Servlet & JSP", icon: <BsFileEarmarkCode className="w-4 h-4 text-white" /> },
       ],
     },
 
-    // DATABASES
+    // DATABASE
     {
       icon: Database,
       title: "Database & Storage",
       color: "text-teal-400",
       skills: [
         { name: "MySQL", icon: <SiMysql className="w-4 h-4 text-[#00758F]" /> },
-        {
-          name: "MySQL Workbench",
-          icon: <DiMysql className="w-4 h-4 text-[#00618A]" />,
-        },
+        { name: "MySQL Workbench", icon: <DiMysql className="w-4 h-4 text-[#00618A]" /> },
       ],
     },
 
@@ -139,36 +100,21 @@ export default function SkillsSection() {
       title: "Tools & Platforms",
       color: "text-purple-400",
       skills: [
-        {
-          name: "Spring Initializr",
-          icon: <SiSpring className="w-4 h-4 text-green-500" />,
-        },
-        {
-          name: "STS (Spring Tool Suite)",
-          icon: <Cpu className="w-4 h-4 text-green-300" />,
-        },
-        {
-          name: "Postman",
-          icon: <SiPostman className="w-4 h-4 text-orange-500" />,
-        },
+        { name: "Spring Initializr", icon: <SiSpring className="w-4 h-4 text-green-500" /> },
+        { name: "STS (Spring Tool Suite)", icon: <Cpu className="w-4 h-4 text-green-300" /> },
+        { name: "Postman", icon: <SiPostman className="w-4 h-4 text-orange-500" /> },
         { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
         { name: "GitHub", icon: <FaGithub className="w-4 h-4 text-white" /> },
-        {
-          name: "Eclipse IDE",
-          icon: <TbBrandEclipse className="w-4 h-4 text-purple-400" />,
-        },
-        {
-          name: "VS Code",
-          icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
-        },
-        {
-          name: "MySQL Workbench",
-          icon: <FaDatabase className="w-4 h-4 text-blue-300" />,
-        },
+
+        // FIXED: Replaced invalid TbBrandEclipse with BsCodeSquare
+        { name: "Eclipse IDE", icon: <BsCodeSquare className="w-4 h-4 text-purple-400" /> },
+
+        { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
+        { name: "MySQL Workbench", icon: <FaDatabase className="w-4 h-4 text-blue-300" /> },
       ],
     },
 
-    // OTHER SKILLS
+    // CORE CONCEPTS
     {
       icon: Wrench,
       title: "Core Concepts",
@@ -176,14 +122,8 @@ export default function SkillsSection() {
       skills: [
         { name: "OOP", icon: <Cpu className="w-4 h-4 text-blue-300" /> },
         { name: "DSA", icon: <Cpu className="w-4 h-4 text-green-300" /> },
-        {
-          name: "Problem Solving",
-          icon: <Cpu className="w-4 h-4 text-pink-300" />,
-        },
-        {
-          name: "Debugging",
-          icon: <Cpu className="w-4 h-4 text-orange-300" />,
-        },
+        { name: "Problem Solving", icon: <Cpu className="w-4 h-4 text-pink-300" /> },
+        { name: "Debugging", icon: <Cpu className="w-4 h-4 text-orange-300" /> },
       ],
     },
   ];
