@@ -8,12 +8,11 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Student Management System (JSP, Servlet, JDBC)",
+      title: "Employee Management System (Spring Boot, REST API, MySQL)",
       description:
-        "A complete student management web application built using JSP, Servlets, JDBC, and MySQL. Features include CRUD operations, login system, session handling, form validation, and record sorting using Java Collections.",
-      src: "https://drive.google.com/file/d/1Q8yom5fVs_UJjHlY-yKb5jxem7-twxYc/view?usp=sharing",
+        "Developed a CRUD-based backend application with REST APIs for managing employee data. Implemented creation of single/multiple records, search by ID/email/name, update, delete, pagination, sorting, and total count. Used Spring Boot, JPA, Hibernate, MySQL, DTO mapping, and Jakarta validation.",
       githubLink:
-        "https://github.com/amanshah17/Student-Management-Servlet-crud-A",
+        "https://github.com/amanshah17/Employee-Management-System-Spring-Boot-REST-API-MySQL-",
     },
     {
       title: "Shape Based Game (Java OOP + SOLID)",
@@ -25,10 +24,25 @@ const Projects = () => {
       title: "Personal Portfolio Website (React + Tailwind CSS)",
       description:
         "A modern portfolio website built using React, Tailwind CSS, and Framer Motion. Includes animations, project showcases, responsive design, and a dynamic UI to highlight skills and achievements.",
-      src: "https://drive.google.com/file/d/1pcpnT0u80xNKAAzRtKrqGwFOqHL1n-p2/view?usp=sharing",
       githubLink: "https://github.com/amanshah17/Aman-Kumar-Shah---Portfolio",
       liveLink: "https://amanshah17.github.io/Aman-Kumar-Shah---Portfolio/",
     },
+    {
+      title: "Employee Management System Frontend (React.js, Tailwind CSS, Axios, Vite, JSON Server)",
+      description:
+        "A responsive Employee Management System built with React, featuring secure authentication, full CRUD operations using Axios and JSON Server, and a polished UI with React Router and Tailwind CSS. Added validations, error handling, and toast notifications for a smooth user experience.",
+      githubLink:
+        "https://github.com/amanshah17/crud-app-Frontend",
+      liveLink: "https://crud-app-frontend-sable.vercel.app/",
+    },
+    {
+      title: "Currency Converter Application(React, Vite, Tailwind CSS, Fetch API)",
+      description:
+        "Developed a real-time currency converter that fetches live exchange rates through an API, featuring a swap function and a responsive glassmorphism-styled UI. The project includes reusable components and a custom hook for efficient API fetching and error handling.",
+      githubLink:
+        "https://github.com/amanshah17/currencyConvertor1",
+      liveLink: "https://currency-convertor1-eight.vercel.app/",
+    }
   ];
 
   const containerVariants = {
