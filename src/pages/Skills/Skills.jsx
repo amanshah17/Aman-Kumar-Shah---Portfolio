@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
-import IconCloudDemo from "../../components/ui/icon-cloud";
+
+import Bird from "../../components/ui/bird";
+import Orb from "../../components/ui/orb";
 
 // Icons
 import { Code2, Database, Cpu, Layout, Wrench } from "lucide-react";
@@ -21,9 +23,33 @@ import { PiFileSql } from "react-icons/pi";
 import { DiMysql } from "react-icons/di";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
-  <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-    <div className="absolute inset-0 bg-linear-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
-    <CardContent className="p-6 relative z-10">
+  <SkillCardInner icon={Icon} title={title} skills={skills} color={color} />
+);
+
+// Inner component for stateful hover handling
+function SkillCardInner({ icon: Icon, title, skills, color }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <Card
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20"
+    >
+      {/* background overlay removed */}
+
+      {/* Birds are mounted only while hovered */}
+      {hovered && (
+        <div className="absolute bottom-3 right-4 pointer-events-none z-0">
+          <div className="birds w-40 h-20 relative">
+            <Bird className="bird1" delay="0s" duration="1.8s" stroke={1.8} size={24} animate />
+            <Bird className="bird2" delay="0.12s" duration="1.9s" stroke={1.4} size={22} animate />
+            <Bird className="bird3" delay="0.24s" duration="2.2s" stroke={1.2} size={20} animate />
+          </div>
+        </div>
+      )}
+
+      <CardContent className="p-6 relative z-10">
       <div className="flex items-center gap-4 mb-6">
         <div className={`p-3 rounded-xl bg-gray-800/50 ${color}`}>
           <Icon className="w-8 h-8" />
@@ -47,7 +73,8 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
       </div>
     </CardContent>
   </Card>
-);
+  );
+}
 
 export default function SkillsSection() {
   const skillCategories = [
@@ -129,13 +156,14 @@ export default function SkillsSection() {
   ];
 
   return (
-    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
-      <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+    <main className="pt-15 lg:pt-0 text-white min-h-screen relative">
 
-      <section className="container mx-auto px-4 py-11 relative z-10">
-        <div className="flex justify-center items-center mb-12">
-          <IconCloudDemo />
-        </div>
+
+      {/* Orb: small glowing orb that sits at the top of the skills cards */}
+      <Orb hue={260} hoverIntensity={0.25} rotateOnHover={true} backgroundColor="#04081A" />
+
+      <section className="container mx-auto px-4 py-11 relative z-10" style={{ paddingTop: '50vh' }}>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, i) => (
@@ -151,29 +179,18 @@ export default function SkillsSection() {
       </section>
 
       <style jsx>{`
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-        .bg-grid-pattern {
-          background-image: linear-gradient(
-              to right,
-              rgba(100, 100, 255, 0.1) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              to bottom,
-              rgba(100, 100, 255, 0.1) 1px,
-              transparent 1px
-            );
-          background-size: 30px 30px;
+        /* Birds flying on card hover (kept) */
+        .birds { overflow: visible; }
+        .bird { position: absolute; width: 1.5rem; height: 1.5rem; color: #ffffff; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45)); transform-origin: center; animation: flyUpRight 1.8s cubic-bezier(.22,.9,.3,1) infinite; animation-play-state: paused; opacity: 0; }
+        .bird1 { left: 6px; bottom: 0; animation-delay: 0s; }
+        .bird2 { left: 12px; bottom: 6px; animation-delay: 0.12s; animation-duration: 1.9s; }
+        .bird3 { left: 26px; bottom: 3px; animation-delay: 0.24s; animation-duration: 2.2s; }
+
+        @keyframes flyUpRight {
+          0% { transform: translateX(0) translateY(40px) rotate(0); opacity: 0; }
+          10% { opacity: 1; transform: translateX(8px) translateY(20px) rotate(-6deg); }
+          60% { opacity: 1; }
+          100% { transform: translateX(120px) translateY(-120px) rotate(-25deg); opacity: 0; }
         }
       `}</style>
     </main>

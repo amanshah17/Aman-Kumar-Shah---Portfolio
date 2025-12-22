@@ -49,43 +49,7 @@ export const renderCustomIcon = (icon, theme) => {
   });
 };
 
-export default function IconCloud({ iconSlugs = [], imageArray = [] }) {
-  const [iconData, setIconData] = useState(null);
-  const { theme = "dark" } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
-
-  // Only render client-side
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    let active = true;
-    if (iconSlugs.length > 0) {
-      fetchSimpleIcons({ slugs: iconSlugs }).then((response) => {
-        if (active) setIconData(response);
-      });
-    }
-    return () => (active = false);
-  }, [iconSlugs]);
-
-  const renderedIcons = useMemo(() => {
-    if (!iconData?.simpleIcons) return null;
-    return Object.values(iconData.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme)
-    );
-  }, [iconData, theme]);
-
-  if (!isMounted) return null;
-
-  return (
-    <Cloud {...cloudProps}>
-      {renderedIcons}
-      {imageArray.map((image, index) => (
-        <a key={index} role="button" onClick={(e) => e.preventDefault()}>
-          <img src={image} alt="cloud-icon" width="42" height="42" draggable={false} />
-        </a>
-      ))}
-    </Cloud>
-  );
+export default function IconCloud() {
+  // Component intentionally disabled to remove canvas output.
+  return null;
 }
